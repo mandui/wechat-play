@@ -1,0 +1,171 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, form, legend, button, input, textarea, th, td, input, aside, article, section, nav, pre, figure {
+    margin: 0;
+    padding: 0;
+}
+body{ color: #333;
+   font: 0.6rem/1 tahoma, arial, 'Microsoft YaHei', simsun;}
+input, select, option, textarea, button {
+    font: 1rem/1 tahoma, arial, 'Microsoft YaHei', simsun;
+}
+	* {
+    -webkit-tap-highlight-color: rgba(180,180,180,0.2);
+}
+
+
+table {
+    border-collapse: collapse;
+}
+li {
+    list-style: none;
+}
+img, iframe {
+    border: none;
+}
+dt {
+    font-weight: bold;
+}
+em, i {
+    font-style: normal;
+}
+input[type="submit"], input[type="reset"], input[type="button"], button {
+    -webkit-appearance: none;
+    line-height: normal !important;
+}
+::-webkit-input-placeholder {
+color:#999;
+}
+.placeholder-text {
+    color: #999;
+}
+.hidden {
+    display: none !important;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+.float-left {
+    float: left !important;
+}
+.float-right {
+    float: right !important;
+}
+.absolute-left {
+    position: absolute !important;
+    left: 0 !important;
+}
+.absolute-right {
+    position: absolute !important;
+    right: 0 !important;
+}
+.over-hidden {
+    overflow: hidden !important;
+}
+.inline-block {
+    display: inline-block !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.border-box {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.middle {
+    vertical-align: middle;
+}
+.block {
+    display: block !important;
+}
+.weight {
+    font-weight: bold !important;
+}
+.both {
+    clear: both !important;
+}
+.ellipsis {
+    display: block;
+    overflow: hidden !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 30px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-guanbi:before {
+    content: "\e6b7";
+}
+.icon-xiangyou:before {
+    content: "\e6af";
+}
+.icon-xiangxia-copy:before {
+    content: "\e63a";
+}
+.icon-icon:before {
+    content: "\e66e";
+}
+.icon-xiangzuo:before {
+    content: "\e682";
+}
+.icon-open-eye:before {
+    content: "\e79c";
+}
+.icon-biyan:before {
+    content: "\e610";
+}/** * Swiper 4.3.3 * Most modern mobile touch slider and framework with hardware accelerated transitions * http://www.idangero.us/swiper/ * * Copyright 2014-2018 Vladimir Kharlampidi * * Released under the MIT License * * Released on:June 5,2018 */	
+
+.font-color{
+    margin-top: 3vw;
+    color: #03a9f4;
+    font-size: 4vw;
+}
+
+a:visited {
+    color: #03a9f4;
+}
+
+a:hover {
+    color: #03a9f4;
+}
+/*登录注册*/
+
+.login-logo{ width: 8rem; height:8rem; background-image: linear-gradient(to right,#17c8ba,#6078ea); margin: 3rem auto 1rem; color: #fff; line-height: 9rem; font-size: 3rem; }
+
+.login-cont{ margin: 0 2rem; line-height: 4rem;}
+.login-cont li{ border-bottom: 1px solid #ebebeb; height: 3rem; padding: 1rem; position: relative; overflow: hidden;}
+.login-cont li input{ border: none; line-height: 4rem; width: 90%; outline: 0; margin-left:10%;}
+.login-cont{ margin: 0 2rem; line-height: 4rem;}
+#click{ position: absolute; right: 0; top: 50%; margin-top: 0.5rem; transform: translate(0,-50%)}
+
+.n-button{
+    background-image: linear-gradient(to right,#17c8ba,#6078ea);
+    color: #fff; border-radius:2rem; height:10vw;
+    line-height: 3.4rem; font-size: 1.2rem; margin-top: 3.4rem;}
+
+.login-cont ul li .tp1{  width: 24px;    height: 24px;    position: absolute;    left: 10px; bottom:1rem;  background-repeat: no-repeat;    background-position: center;	background-size: 20px;	background: url(../fonts/zh.png); 
+}
+.login-cont ul li .tp2{  width: 24px;    height: 24px;    position: absolute;    left: 10px; bottom:1rem;  background-repeat: no-repeat;    background-position: center;	background-size: 20px;	background: url(../fonts/ym.png);
+}/* CSS Document */
+
+.login-cont {
+	font-size: 16px;
+}

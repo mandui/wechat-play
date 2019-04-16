@@ -1,0 +1,107 @@
+@import "package:bulma_sass/scss/bulma";
+
+.my-pjt-list-section {
+  margin-top: 18vw;
+  margin-bottom: 15vw;
+}
+
+.my-card {
+  margin-top: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.my-card-content {
+  padding: 5vw 5vw 4vw;
+}
+
+.my-footer-item {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-size: 4vw;
+  color: #2196f3;
+}
+
+.my-footer-item:hover {
+  color: #2196f3;
+}
+
+time {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.my-back {
+  color: #2196f3;
+
+}
+
+.my-level {
+  padding: 3vw 8vw 3vw 3vw;
+}
+
+.my-line {
+  margin-bottom: 1vw;
+}
+
+.my-title {
+  font-size: 6vw;
+  font-weight: normal;
+}
+
+.my-info-section {
+  margin-top: 18vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.my-details-section {
+  margin: 4vw 5vw 8vw;
+}
+
+my-th {
+  font-size: 5vw;
+  font-weight: normal;
+}
+
+.my-card-content {
+  padding: 5vw 5vw 4vw;
+}
+
+.my-footer-item {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-size: 4vw;
+  color: #2196f3;
+}
+
+.my-footer-item:hover {
+  color: #2196f3;
+}
+
+.my-line {
+  margin-bottom: 1vw;
+}
+.my-card-text {
+  font-size: 4vw;
+}
+
+fa {
+  color: #2196f3;
+}
+
+.my-level-content {
+  padding: 4vw;
+}
+
+.my-level-item {
+  margin-right: 0vw;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.my-last-level{
+  padding-bottom: 1vw;
+}

@@ -1,0 +1,79 @@
+<div class="login-logo circle text-center">
+    <img src="images/min-logo.png" width="80" height="80">
+</div>
+
+
+<div class="container is-mobile my-input-container">
+
+    <div class="field is-mobile is-small" [hidden]="hideId">
+        <div class="control has-icons-left my-input-div">
+            <input type="text" placeholder="请输入姓名"
+                   [(ngModel)]="inputName" (click)="nameClick()"
+                   [ngClass]="validatedName ? 'input my-input' : 'input my-input is-danger'">
+            <span class="icon is-small is-left my-icon-span">
+                <fa name="user-circle"></fa>
+            </span>
+        </div>
+        <p class="my-help help is-danger" *ngIf="!validatedName">姓名不可为空</p>
+    </div>
+
+    <div class="field is-mobile is-small" [hidden]="hideId">
+        <div class="control has-icons-left my-input-div">
+            <input type="tel" placeholder="请输入身份证号"
+                   [(ngModel)]="inputId" (click)="idClick()"
+                   [ngClass]="validatedId ? 'input my-input' : 'input my-input is-danger'">
+            <span id="input-id" class="icon is-small is-left my-icon-span">
+                <fa name='id-card'></fa>
+            </span>
+        </div>
+        <p class="my-help help is-danger" *ngIf="!validatedId">身份证号输入有误，请检查</p>
+    </div>
+
+    <div class="is-centered field is-mobile is-small" [hidden]="hideAccount">
+        <div class="control has-icons-left my-input-div">
+            <input type="tel" placeholder="请输入账号"
+                   [(ngModel)]="inputAccount" (click)="accountClick()"
+                   [ngClass]="validatedAccount ? 'input my-input' : 'input my-input is-danger'">
+            <span class="icon is-small is-left my-icon-span">
+                <fa name='credit-card'></fa>
+            </span>
+        </div>
+        <p class="my-help help is-danger" *ngIf="!validatedAccount">账号输入有误，请核对后再输入</p>
+    </div>
+
+    <div class="field is-mobile is-small" [hidden]="hideAccount">
+        <div class="control has-icons-left my-input-div">
+            <input type="password" placeholder="请输入密码"
+                   [(ngModel)]="inputPsw" (click)="pswClick()"
+                   [ngClass]="validatedPsw ? 'input my-input' : 'input my-input is-danger'">
+            <span class="icon is-small is-left my-icon-span">
+                <fa name='key'></fa>
+            </span>
+        </div>
+        <p class="my-help help is-danger" *ngIf="!validatedPsw">密码不可为空</p>
+    </div>
+</div>
+
+<div class="container my-button-container">
+    <a (click)="auth()" class="button my-button is-primary">登&nbsp;&nbsp;录</a>
+    <a (click)="changeMode()" class="text-center block font-color">{{switchTo}}</a>
+</div>
+
+
+
+<tip-msg [desc]="errorMsg"
+         [tipOn]="tipError || tipLoading"
+         (click)="tipError=false"
+         [isLoading]="tipLoading">
+
+</tip-msg>
+
+
+<hr>
+<div class="columns my-test-division">
+    <button class="test-button button is-outlined is-danger is-small" (click)="test('account_err')">帐密不存在</button>
+    <button class="test-button button is-outlined is-dark is-small" (click)="test('timeout')">超时</button>
+    <button class="test-button button is-outlined is-warning is-small" (click)="test('id_err')">身份证信息不存在</button>
+    <button class="test-button button is-outlined is-info is-small" (click)="test('one_prop')">单一房产</button>
+    <button class="test-button button is-outlined is-primary is-small" (click)="test('multi_prop')">多套房产</button>
+</div>

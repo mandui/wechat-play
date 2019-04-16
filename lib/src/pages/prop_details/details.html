@@ -1,0 +1,120 @@
+<nav-bar class="navbar is-fixed-top"></nav-bar>
+
+<section class="my-info-section">
+    <div class="card">
+        <div class="card-content my-card-content">
+            <div class="content my-card-text">
+                <div class="my-line">
+                    <span><fa group='regular' name='user' [fw]="true"></fa></span>
+                    <strong>&nbsp;业主：</strong>{{prop.ownerInfo.name}}
+                </div>
+                <div class="my-line" *ngIf="showOwnerId()">
+                    <span><fa group='regular' name='id-card' [fw]="true"></fa></span>
+                    <strong>&nbsp;证件：</strong>{{prop.ownerInfo.id}}
+                </div>
+                <div class="my-line" *ngIf="showTel()">
+                    <span><fa name='phone' [fw]="true"></fa></span>
+                    <strong>&nbsp;电话：</strong>{{prop.ownerInfo.tel}}
+                </div>
+                <div class="my-line" *ngIf="showEmail()">
+                    <span><fa name='envelope' group='regular' [fw]="true"></fa></span>
+                    <strong>&nbsp;e-mail：</strong>{{prop.ownerInfo.email}}
+                </div>
+                <div class="my-line">
+                    <span><fa name='crop' [fw]="true"></fa></span>
+                    <strong>&nbsp;面积：</strong>{{prop.propInfo.area}}&nbsp;㎡
+                </div>
+                <div class="my-line" *ngIf="showDate()">
+                    <span><fa name='calendar' group='regular' [fw]="true"></fa></span>
+                    <strong>&nbsp;购买时间：</strong>{{prop.propInfo.boughtDate}}
+                </div>
+                <div class="my-line" *ngIf="showPrice()">
+                    <span><fa name='yen-sign'  [fw]="true"></fa></span>
+                    <strong>&nbsp;售价：</strong>{{prop.propInfo.price}}元
+                </div>
+                <div class="my-line">
+                    <span><fa group='regular' name='map' [fw]="true"></fa></span>
+                    <strong>&nbsp;地址：</strong>{{prop.propAddr}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content my-card-content">
+            <div class="content my-card-text">
+                <div class="my-line">
+                    <span><fa group='regular' name='newspaper' [fw]="true"></fa></span>
+                    <strong>&nbsp;账号：</strong>{{prop.account.accountNo}}
+                </div>
+                <div class="my-line">
+                    <span><fa name='credit-card' [fw]="true"></fa></span>
+                    <strong>&nbsp;承办银行：</strong>{{prop.account.bankName}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="my-details-section">
+    <div class="card">
+        <div class="card-content my-level-content">
+            <nav class="level is-mobile">
+                <div class="level-item my-level-item has-text-centered">
+                    <div>
+                        <p class="heading">维修资金本金(元)</p>
+                        <p class="title my-title">{{prop.account.money.toStringAsFixed(2)}}</p>
+                    </div>
+                </div>
+                <div class="level-item my-level-item has-text-centered">
+                    <div>
+                        <p class="heading">维修资金利息(元)</p>
+                        <p class="title my-title">{{prop.account.interest.toStringAsFixed(2)}}</p>
+                    </div>
+                </div>
+
+            </nav>
+            <nav class="level is-mobile">
+                <div class="level-item my-level-item has-text-centered">
+                    <div>
+                        <p class="heading">本金冻结额(元)</p>
+                        <p class="title my-title">{{prop.account.freezedMoney.toStringAsFixed(2)}}</p>
+                    </div>
+                </div>
+                <div class="level-item my-level-item has-text-centered">
+                    <div>
+                        <p class="heading">利息冻结额(元)</p>
+                        <p class="title my-title">{{prop.account.freezedMoney.toStringAsFixed(2)}}</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="card"  *ngIf="showLogs()">
+        <div class="my-table-content">
+            <table class="table my-table is-striped">
+                <thead>
+                <tr>
+                    <th class="my-th">交易时间</th>
+                    <th class="my-th">说明</th>
+                    <th class="my-th">金额</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr *ngFor="let log of prop.account.accountLog">
+                    <td>{{log.time}}</td>
+                    <td>{{log.purpose}}</td>
+                    <td>{{log.money}}元</td>
+                </tr>
+                <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+

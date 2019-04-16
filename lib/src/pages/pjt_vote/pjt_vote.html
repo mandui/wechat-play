@@ -1,0 +1,116 @@
+<nav-bar class="navbar is-fixed-top"></nav-bar>
+
+<section class="my-details-section">
+    <div class="card my-card">
+        <div class="card">
+            <div class="card-content my-card-content">
+                <div class="my-line">
+                    <span><fa name='wrench' [fw]="true"></fa></span>
+                    <strong>维修说明：</strong>{{project.projectDesc}}
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content my-card-content">
+
+                <div class="columns is-mobile">
+                    <div class="column"> <span><fa name='chart-pie' [fw]="true"></fa></span>
+                        <strong>类型：</strong>{{project.apportionType}}
+                    </div>
+
+                    <div class="column"> <span><fa name='users' [fw]="true"></fa></span>
+                        <strong>分摊户数：</strong>{{project.totalOwner}}
+                    </div>
+                </div>
+
+
+                <nav class="level is-mobile">
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">分摊面积(㎡)</p>
+                            <p class="title my-title">{{project.area.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">总分摊面积(㎡)</p>
+                            <p class="title my-title">{{project.totalArea.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="level is-mobile my-last-level">
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">分摊金额(元)</p>
+                            <p class="title my-title">{{project.money.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">总分摊金额(元)</p>
+                            <p class="title my-title">{{project.totalMoney.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-content my-card-content">
+                <div class="my-line">
+                    <span><fa name='handshake' [fw]="true"></fa></span>
+                    <strong>您的选择</strong>&nbsp;{{chosenMsg}}
+                </div>
+
+                <nav class="level is-mobile my-vote-level">
+                    <div class="level-item my-level-item has-text-centered">
+                        <button class="button is-small is-outlined is-info my-button"
+                                (click)="vote('agree')">
+                            &nbsp;同&nbsp;意&nbsp;
+                        </button>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <button class="button is-small is-outlined is-info my-button"
+                                (click)="vote('disagree')">
+                            &nbsp;不&nbsp;同&nbsp;意&nbsp;
+                        </button>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <button class="button is-small is-outlined is-info my-button"
+                                (click)="vote('waiver')">
+                            &nbsp;弃&nbsp;权&nbsp;
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="card-content my-card-content">
+                <div class="my-line">
+                    <span><fa name='info-circle' [fw]="true"></fa></span>
+                    <strong>您的意见</strong>
+                </div>
+                <div class="line-container" >
+                    <div class="my-desc-msg">{{descMsg}}</div>
+                    <button class="my-button button is-info is-small" (click)="submitOpinion()">&nbsp;提交&nbsp;</button>
+                </div>
+                <div class="textarea-container">
+                    <textarea class="textarea is-mobile my-textarea" [(ngModel)]="inputOpinion"
+                              placeholder="如果您有任何意见，可以在这里告诉我们。"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<tip-msg [desc]="errorMsg"
+         [tipOn]="tipError || tipLoading"
+         (click)="tipError=false"
+         [isLoading]="tipLoading">
+
+</tip-msg>

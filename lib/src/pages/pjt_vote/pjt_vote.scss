@@ -1,0 +1,127 @@
+@import "package:bulma_sass/scss/bulma";
+
+.my-title {
+  font-size: 7vw;
+  font-weight: normal;
+}
+
+.my-details-section {
+  margin: 18vw 5vw 10vw;
+}
+
+my-th {
+  font-size: 4vw;
+  font-weight: normal;
+}
+
+.my-card-content {
+  padding: 4vw 4vw 4vw;
+}
+
+.my-footer-item {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-size: 4vw;
+  color: #2196f3;
+}
+
+.my-footer-item:hover {
+  color: #2196f3;
+}
+
+.my-line {
+  margin-bottom: 1vw;
+}
+.my-card-text {
+  font-size: 4vw;
+}
+
+fa {
+  color: #2196f3;
+}
+
+.my-level-content {
+  padding: 4vw;
+}
+
+.my-level-item {
+  margin-right: 0vw;
+}
+
+.my-table {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+td {
+  font-size: 3.5vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  vertical-align: baseline;
+}
+
+tr {
+  padding-left: 2vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  vertical-align: baseline;
+}
+
+th {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.my-table-content {
+  padding: 2vw 5vw 3vw;
+}
+
+.my-column {
+  font-size: 3.5vw;
+}
+
+.my-tr {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.my-title-line {
+  padding-top: 3vw;
+  font-weight: bold;
+}
+
+.my-vote-level {
+  margin-top: 5vw;
+  margin-right: 5vw;
+}
+
+.container {
+  align-items: center;
+  margin-bottom: 3vw;
+}
+
+.my-textarea {
+  width: 75vw;
+  min-width: 70vw;
+  min-height: auto;
+  height: auto;
+}
+
+.my-desc-msg {
+  margin:  auto;
+  font-weight: lighter;
+  font-size: 3.5vw;
+  padding-left: 5vw;
+  flex: 4;
+}
+
+.my-button {
+  flex: 1;
+}
+
+.line-container {
+  display: flex;
+  min-height: 10vw;
+  margin-bottom: 2vw;
+}

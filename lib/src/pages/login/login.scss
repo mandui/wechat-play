@@ -1,0 +1,99 @@
+@import "package:bulma_sass/scss/bulma";
+
+:host {
+  margin: 0 auto;
+}
+
+.my-modal-content {
+  padding: 2vw 5vw 5vw 2vw;
+  font-size: 5vw;
+}
+
+.my-modal-card {
+  margin: 5vw;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+}
+
+.my-modal-background {
+  opacity: 0.6;
+  background: white;
+}
+
+.my-icon-span {
+  width: 1.5em;
+  margin: auto;
+  bottom: 0;
+  left: 3vw;
+}
+
+.my-input-container {
+  padding-top: 5vw;
+}
+
+.my-input-div {
+  margin: 0 auto;
+  width: 75vw;
+}
+
+.my-help {
+  margin: 0 auto;
+  width: 75vw;
+}
+
+.my-input {
+  height: 7vw;
+  font-size: 4vw;
+  opacity: 0.9;
+  width: 65vw;
+  margin: 0 auto;
+}
+
+.my-button-container {
+  margin-top: 5vw;
+}
+
+fa {
+  margin: auto;
+}
+
+.my-button {
+  color: white;
+  display: block;
+  width: 35%;
+  margin: auto;
+  height: 7vw;
+  font-size: 5vw;
+}
+
+.my-button:hover {
+   color: white;
+ }
+
+.my-button:visited {
+  color: white;
+}
+
+.my-test-division {
+  margin-top: 10vw;
+  margin-left: 5vw;
+  margin-right: 3vw;
+}
+
+.test-button {
+  margin-bottom: 2vw;
+  margin-right: 2vw;
+  font-weight: bold;
+}
+
+.my-spinner {
+  color: #4db6ac;
+}
+
+.my-loading-text {
+  color: #4db6ac;
+  font-size: 5vw;
+}
+
+.my-bulma-button {
+  font-weight: bold;
+}

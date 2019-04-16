@@ -1,0 +1,36 @@
+<nav-bar class="navbar is-fixed-top"></nav-bar>
+
+<section class="my-container">
+
+    <div class="card my-card"  *ngFor="let prop of properties" (click)="select(prop)">
+        <div class="card-content my-card-content">
+            <div class="content my-card-text">
+                <div class="my-line">
+                    <span><fa group='regular' name='map' [fw]="true"></fa></span>
+                    <strong>&nbsp;地址：</strong>{{prop.propAddr}}
+                </div>
+                <div class="my-line">
+                    <span><fa name='crop' [fw]="true"></fa></span>
+                    <strong>&nbsp;面积：</strong>{{prop.propInfo.area}}&nbsp;㎡
+                </div>
+                <div class="my-line">
+                    <span><fa group='regular' name='newspaper' [fw]="true"></fa></span>
+                    <strong>&nbsp;账号：</strong>{{prop.account.accountNo}}
+                </div>
+            </div>
+
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item my-footer-item ">{{footerMsg}}</a>
+        </footer>
+    </div>
+
+</section>
+
+<tip-msg [desc]="errorMsg"
+         [tipOn]="tipError || tipLoading"
+         (click)="tipError=false"
+         [isLoading]="tipLoading">
+
+</tip-msg>
+

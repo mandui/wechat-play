@@ -1,0 +1,83 @@
+@import "package:bulma_sass/scss/bulma";
+
+.my-title {
+  font-size: 7vw;
+}
+
+.my-info-section {
+  margin-top: 18vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.my-details-section {
+  margin: 4vw 5vw 8vw;
+}
+
+my-th {
+  font-size: 5vw;
+  font-weight: normal;
+}
+
+.my-card-content {
+  padding: 5vw 5vw 4vw;
+}
+
+.my-footer-item {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-size: 4vw;
+  color: #2196f3;
+}
+
+.my-footer-item:hover {
+  color: #2196f3;
+}
+
+.my-line {
+  margin-bottom: 1vw;
+}
+.my-card-text {
+  font-size: 4vw;
+}
+
+fa {
+  color: #2196f3;
+}
+
+.my-level-content {
+  padding: 4vw;
+}
+
+.my-level-item {
+  margin-right: 0vw;
+}
+
+.my-table {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+td {
+  font-size: 3.5vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  vertical-align: baseline;
+}
+
+tr {
+  padding-left: 2vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  vertical-align: baseline;
+}
+
+th {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.my-table-content {
+  padding: 2vw 5vw 3vw;
+}

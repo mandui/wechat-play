@@ -1,0 +1,61 @@
+<nav class="breadcrumb my-level is-fixed-top"
+     aria-label="breadcrumbs">
+    <ul>
+        <li *ngIf="showPrev()">
+            &nbsp;
+            <a class="my-a" (click)="displayPrev()">
+                <fa name="angle-double-left"></fa>  </a>
+        </li>
+
+        <li *ngIf="showEntry()">
+            &nbsp;
+            <a class="my-a" [routerLink]="RoutePaths.entry.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="sign-in-alt"></fa>&nbsp;功能选择</a>
+        </li>
+
+        <li [ngClass]="inPropList() ? 'is-active': ''"
+            *ngIf="showPropList()">
+            <a class="my-disabled" [routerLink]="RoutePaths.props.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="building" group="regular"></fa>&nbsp;房产列表</a>
+        </li>
+
+        <li class="is-active" *ngIf="showDetails()">
+            <a class="my-a" [routerLink]="RoutePaths.details.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="yen-sign"></fa>&nbsp;资金详情</a>
+        </li>
+
+        <li [ngClass]="inPjtList() ? 'is-active': ''"
+            *ngIf="showPjtList()">
+            <a class="my-a" [routerLink]="RoutePaths.projects.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="tasks"></fa>&nbsp;维修项目</a>
+        </li>
+
+        <li class="is-active" *ngIf="showPjtVote()">
+            <a class="my-a" [routerLink]="RoutePaths.vote.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="vote-yea"></fa>&nbsp;维修决议</a>
+        </li>
+
+        <li class="is-active" *ngIf="showPjtApportion()" >
+            <a class="my-a" [routerLink]="RoutePaths.apportion.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="chart-pie"></fa>&nbsp;分摊清册</a>
+        </li>
+
+        <li class="is-active" *ngIf="showPolicyList()" >
+            <a class="my-a" [routerLink]="RoutePaths.apportion.toUrl()"
+               [routerLinkActive]="'active-route'">
+                <fa name="chart-pie"></fa>&nbsp;政策法规</a>
+        </li>
+
+
+        <li *ngIf="showNext()">
+            <a class="my-a" (click)="displayNext()">
+                <fa name="angle-double-right"></fa></a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,99 @@
+<nav-bar class="navbar is-fixed-top"></nav-bar>
+
+<section class="my-details-section">
+    <div class="card my-card">
+        <div class="card">
+            <div class="card-content my-card-content">
+                <div class="my-line">
+                    <span><fa name='wrench' [fw]="true"></fa></span>
+                    <strong>维修说明：</strong>{{project.projectDesc}}
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content my-card-content">
+
+                <div class="columns is-mobile">
+                    <div class="column"> <span><fa name='chart-pie' [fw]="true"></fa></span>
+                        <strong>类型：</strong>{{project.apportionType}}
+                    </div>
+
+                    <div class="column"> <span><fa name='users' [fw]="true"></fa></span>
+                        <strong>分摊户数：</strong>{{project.totalOwner}}
+                    </div>
+                </div>
+
+
+                <nav class="level is-mobile">
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">分摊面积(㎡)</p>
+                            <p class="title my-title">{{project.area.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">总分摊面积(㎡)</p>
+                            <p class="title my-title">{{project.totalArea.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="level is-mobile my-last-level">
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">分摊金额(元)</p>
+                            <p class="title my-title">{{project.money.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">总分摊金额(元)</p>
+                            <p class="title my-title">{{project.totalMoney.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="my-table-content">
+
+                <div class="my-title-line">
+                    <span><fa name='clipboard' [fw]="true"></fa></span>
+                    <strong>分摊清册</strong>
+                </div>
+
+                <table class="table my-table is-striped">
+                    <thead>
+                    <tr><td></td></tr>
+                    </thead>
+                    <tbody>
+                    <tr class="my-tr" *ngFor="let item of project.apportionDetails">
+                        <td>
+                            <div>
+                                <span><fa name='home' [fw]="true"></fa></span>&nbsp;
+                                <strong>{{item.houseLocation}}</strong>
+                            </div>
+
+                            <div class="columns is-mobile ">
+                                <div class="column my-column">
+                                    <strong>分摊面积：</strong>{{item.area}}㎡
+                                </div>
+
+                                <div class="column my-column">
+                                    <strong>分摊金额：</strong>{{item.money}}元
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</section>

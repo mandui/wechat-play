@@ -1,0 +1,33 @@
+<section class="aui-flexView">
+
+    <section class="aui-scrollView">
+        <div class="m-slider" data-ydui-slider>
+            <div class="slider-wrapper">
+                <div class="slider-item">
+                    <img src="images/banner.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="aui-palace">
+            <a *ngFor="let entry of entries"
+                    (click)="enter(entry.type)" class="aui-palace-grid">
+                <div class="aui-palace-grid-icon">
+                    <img [src]="entry.iconUrl" alt="">
+                </div>
+                <div class="aui-palace-grid-text">
+                    <h2>{{entry.title}}</h2>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+</section>
+
+<tip-msg [desc]="errorMsg"
+         [tipOn]="tipError || tipLoading"
+         (click)="tipError=false"
+         [isLoading]="tipLoading">
+
+</tip-msg>

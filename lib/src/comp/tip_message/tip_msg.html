@@ -1,0 +1,18 @@
+<div class='modal is-mobile is-active' *ngIf="tipOn">
+    <div class="modal-background my-modal-background"></div>
+    <div class="modal-card ">
+        <section class="modal-card-body my-modal-card" *ngIf="!isLoading">
+            <div class="my-modal-content">{{desc}}</div>
+            <div class="container">
+                <button class="my-button button is-primary is-small is-pulled-right">&nbsp;好的&nbsp;</button>
+            </div>
+        </section>
+
+        <section class="modal-card-body my-modal-card" *ngIf="isLoading">
+            <div class="level">
+                <fa class="my-spinner level-item" name='spinner' size="2x" [pulse]='true'></fa>
+                <div class="my-loading-text level-item">数据传输中，请稍候...</div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+<div class="articles" *ngIf="articles != null">
+    <article class="media"  *ngFor="let article of articles">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img [src]="article.imageUrl">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+                <p>
+                    <strong>{{article.title}}}</strong> <small>{{article.author}}</small>
+                    <br>
+                    {{article.abstract}}
+                </p>
+            </div>
+        </div>
+    </article>
+</div>
+
+
+<div class="article-content" [innerHtml]="innerLines"></div>

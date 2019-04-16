@@ -1,0 +1,72 @@
+<nav-bar class="navbar is-fixed-top"></nav-bar>
+
+<section class="my-pjt-list-section" >
+    <div class="card my-card" *ngFor="let project of projects">
+        <div class="card">
+            <div class="card-content my-card-content">
+                <div class="my-line">
+                    <span><fa name='wrench' [fw]="true"></fa></span>
+                    <strong>&nbsp;维修说明：</strong>{{project.projectDesc}}
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content my-card-content">
+
+                <div class="columns is-mobile">
+                    <div class="column"> <span><fa name='chart-pie' [fw]="true"></fa></span>
+                        <strong>类型：</strong>{{project.apportionType}}
+                    </div>
+
+                    <div class="column"> <span><fa name='users' [fw]="true"></fa></span>
+                        <strong>分摊户数：</strong>{{project.totalOwner}}
+                    </div>
+                </div>
+
+
+                <nav class="level is-mobile">
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">分摊面积(㎡)</p>
+                            <p class="title my-title">{{project.area.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">总分摊面积(㎡)</p>
+                            <p class="title my-title">{{project.totalArea.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="level is-mobile my-last-level">
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">分摊金额(元)</p>
+                            <p class="title my-title">{{project.money.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                    <div class="level-item my-level-item has-text-centered">
+                        <div>
+                            <p class="heading">总分摊金额(元)</p>
+                            <p class="title my-title">{{project.totalMoney.toStringAsFixed(2)}}</p>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+        <footer class="card-footer">
+            <a class="card-footer-item my-footer-item" (click)="goApportion(project)">分摊清册</a>
+            <a class="card-footer-item my-footer-item" (click)="goVote(project)">{{voteButton(project)}}</a>
+        </footer>
+    </div>
+</section>
+
+<tip-msg [desc]="errorMsg"
+         [tipOn]="tipError || tipLoading"
+         (click)="tipError=false"
+         [isLoading]="tipLoading">
+
+</tip-msg>

@@ -1,0 +1,47 @@
+@import "package:bulma_sass/scss/bulma";
+
+.my-container {
+  margin-top: 18vw;
+}
+
+.my-card {
+  margin-top: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.my-card-content {
+  padding: 5vw 5vw 4vw;
+}
+
+.my-footer-item {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-size: 4vw;
+  color: #2196f3;
+}
+
+.my-footer-item:hover {
+  color: #2196f3;
+}
+
+.my-line {
+  margin-bottom: 1vw;
+}
+
+.my-card-text {
+  font-size: 4vw;
+}
+
+fa {
+  color: #2196f3;
+}
+
+.my-spinner {
+  color: #4db6ac;
+}
+
+.my-loading-text {
+  color: #4db6ac;
+  font-size: 5vw;
+}

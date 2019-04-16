@@ -1,0 +1,20 @@
+@import "package:bulma_sass/scss/bulma";
+
+.my-modal-background {
+  opacity: 0.6;
+  background: white;
+}
+
+.my-modal-content {
+  padding: 2vw 5vw 5vw 2vw;
+  font-size: 5vw;
+}
+
+.my-modal-card {
+  margin: 5vw;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+}
+
+.my-button {
+  font-weight: bold;
+}

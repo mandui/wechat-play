@@ -1,0 +1,25 @@
+@import "package:bulma_sass/scss/bulma";
+
+.my-level {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  padding-left: 3vw;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+}
+
+.active-route {
+  color: #039be5
+}
+
+.my-disabled {
+  color: #363636;
+
+}
+
+.current-li {
+  color: #363636;
+}
+
+.breadcrumbs {
+  font-size: 4vw;
+}
