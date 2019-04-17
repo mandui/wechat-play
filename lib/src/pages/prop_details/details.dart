@@ -8,15 +8,21 @@ import 'package:route_play/src/comp/nav_bar/nav_bar.dart';
 
 @Component (
   selector: 'my-details',
-  templateUrl: 'details.html',
-  styleUrls: ['details.css'],
+  templateUrl: 'details_v2.html',
+  styleUrls: ['details_v2.css'],
   directives: [ NgFor, NgIf, routerDirectives, FaIcon, NavBarComponent],
 )
 
 
 class DetailsComponent implements OnInit {
 
-  DetailsComponent();
+  @override
+  void ngOnInit() {
+    store.setLoc(store.Loc.prop_details);
+    querySelector("title").text = "维修资金详情";
+  }
+
+  /*DetailsComponent();
   Property prop;
 
   @override
@@ -63,6 +69,6 @@ class DetailsComponent implements OnInit {
         || prop.account.accountLog == null
         || prop.account.accountLog.isEmpty;
     return !notShow;
-  }
+  }*/
 
 }

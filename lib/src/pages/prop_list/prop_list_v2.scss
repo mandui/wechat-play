@@ -1,0 +1,20 @@
+@import "../../global.scss";
+
+.prop-button {
+  border-radius: 5vw;
+  background: #2196f3;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  width: 75vw;
+  margin: 3vw auto 3vw;
+  text-align: center;
+}
+
+.prop-button-text {
+  color: white;
+  font-size: 3.5vw;
+}
+
+.property-section {
+  margin-top: 2vw;
+}

@@ -16,8 +16,8 @@ import 'package:route_play/src/data/data_service.dart';
 
 @Component (
   selector: 'prop-list',
-  templateUrl: 'prop_list.html',
-  styleUrls: ['prop_list.css', 'prop.css'],
+  templateUrl: 'prop_list_v2.html',
+  styleUrls: ['prop_list_v2.css'],
   directives: [ NgFor, NgIf, routerDirectives, FaIcon, NavBarComponent, TipMessage],
   providers: [ClassProvider(DataService)],
   exports: [RoutePaths, Routes],
@@ -86,11 +86,6 @@ class PropsComponent implements OnInit {
         break;
       default: footerMsg = "查询详情";
     }
-  }
-
-
-  void test(String testCase) {
-
   }
 
 }

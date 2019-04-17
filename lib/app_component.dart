@@ -1,8 +1,8 @@
 import 'dart:html';
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
-import 'package:angular_components/material_icon/material_icon.dart';
 
+import 'package:route_play/src/comp/nav_bar/nav_bar.dart';
 import 'package:route_play/src/route_paths.dart';
 import 'package:route_play/src/routes.dart';
 
@@ -12,7 +12,7 @@ import 'package:route_play/src/data/local_store.dart' as store;
   selector: 'my-app',
   templateUrl: 'app_component.html',
   styles: ['.active-route {color: #039be5}'],
-  directives: [routerDirectives, coreDirectives, MaterialIconComponent],
+  directives: [routerDirectives, coreDirectives, NavBarComponent],
   exports: [RoutePaths, Routes],
 )
 
@@ -36,5 +36,9 @@ class AppComponent implements OnInit {
           _router.navigate(Routes.entry.toUrl());
       }
     });
+  }
+
+  bool showNavBar() {
+    return store.currLoc == store.Loc.prop_list;
   }
 }

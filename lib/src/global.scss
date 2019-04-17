@@ -1,0 +1,29 @@
+.info-title {
+  font-size: 3.5vw;
+  color: #455a64;
+  font-weight: 400;
+  width: 15vw;
+  text-align: left;
+  padding-left: 2vw;
+}
+
+.info-content {
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: #78909c;
+  padding-left: 6vw;
+  padding-right: 2vw;
+}
+
+.info-line {
+  display: flex;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
+  padding-left: 5vw;
+}
+
+.info-divider {
+  background: #cfd8dc;
+  width: 100vw;
+  height: 1px;
+}
