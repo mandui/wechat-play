@@ -39,8 +39,8 @@ class PropsComponent implements OnInit {
   void ngOnInit() {
     store.setLoc(store.Loc.prop_list);
     querySelector("title").text = "选择您想查询的房产";
-    _preflight();
     properties = store.properties;
+    _preflight();
   }
 
   bool tipLoading = false;
@@ -88,4 +88,27 @@ class PropsComponent implements OnInit {
     }
   }
 
+  List<InfoItem> briefInfo(Property prop) {
+    List<InfoItem> infoItems = List();
+    infoItems.add(InfoItem("账号", prop.account.accountNo));
+    infoItems.add(InfoItem("地址", prop.propAddr));
+    infoItems.add(InfoItem("面积", "${prop.propInfo.area} ㎡"));
+
+    num fund = prop.account.money + prop.account.interest;
+    String fundStr = fund.toStringAsFixed(2) + " 元";
+    infoItems.add(InfoItem("维修金", fundStr));
+
+    num frozenFund = prop.account.freezedMoney + prop.account.freezedInterest;
+    String frozenFundStr = frozenFund.toStringAsFixed(2) + " 元";
+    infoItems.add(InfoItem("冻结额", frozenFundStr));
+
+    return infoItems;
+  }
+
+}
+
+class InfoItem {
+  InfoItem(this.title, this.contents);
+  String title;
+  String contents;
 }

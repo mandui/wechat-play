@@ -16,52 +16,43 @@ import 'package:route_play/src/comp/nav_bar/nav_bar.dart';
 
 class DetailsComponent implements OnInit {
 
-  @override
-  void ngOnInit() {
-    store.setLoc(store.Loc.prop_details);
-    querySelector("title").text = "维修资金详情";
-  }
-
-  /*DetailsComponent();
+  DetailsComponent();
   Property prop;
+  List<InfoItem> infoItems;
+  String fundStr;
+  String frozenFundStr;
 
   @override
   void ngOnInit() {
     store.setLoc(store.Loc.prop_details);
     querySelector("title").text = "维修资金详情";
     prop = store.currentProperty?? store.properties[0];
+    _prepareInfo();
+
+    num fund = prop.account.money + prop.account.interest;
+    fundStr = fund.toStringAsFixed(2) + " 元";
+
+    num frozenFund = prop.account.freezedMoney = prop.account.freezedInterest;
+    frozenFundStr = frozenFund.toStringAsFixed(2) + " 元";
   }
 
-  bool showDate() {
-    bool notShow = prop.propInfo.boughtDate == null
-        || prop.propInfo.boughtDate.isEmpty;
-    return !notShow;
-  }
+  void _prepareInfo() {
+    infoItems = List();
+    List<InfoItem> temp = List();
+    temp.add(InfoItem("业主", prop.ownerInfo.name));
+    temp.add(InfoItem("证件号码", prop.ownerInfo.id));
+    temp.add(InfoItem("联系电话", prop.ownerInfo.tel));
+    temp.add(InfoItem("电子邮箱", prop.ownerInfo.email));
+    temp.add(InfoItem("房屋面积", "${prop.propInfo.area} ㎡"));
+    temp.add(InfoItem("购买时间", prop.propInfo.boughtDate));
+    if (prop.propInfo.price > 0)
+      temp.add(InfoItem("售价", "${prop.propInfo.price}元"));
+    temp.add(InfoItem("资金账号", prop.account.accountNo));
 
-  bool showOwnerId() {
-    bool notShow = prop.ownerInfo.id == null
-        || prop.ownerInfo.id.isEmpty;
-    return !notShow;
-  }
-
-  bool showPrice() {
-    bool notShow = prop.propInfo.price == null
-        || prop.propInfo.price <= 0;
-    return !notShow;
-  }
-
-  bool showTel() {
-    bool notShow = prop.ownerInfo.tel == null
-        || prop.ownerInfo.tel.isEmpty;
-    return !notShow;
-  }
-
-  bool showEmail() {
-    bool notShow = prop.ownerInfo.email == null
-        || prop.ownerInfo.email.isEmpty;
-    num a = 2.321;
-    a.toStringAsFixed(2);
-    return !notShow;
+    for (InfoItem item in temp) {
+      if (item.contents != null && item.contents.trim().isNotEmpty)
+        infoItems.add(item);
+    }
   }
 
   bool showLogs() {
@@ -69,6 +60,11 @@ class DetailsComponent implements OnInit {
         || prop.account.accountLog == null
         || prop.account.accountLog.isEmpty;
     return !notShow;
-  }*/
+  }
+}
 
+class InfoItem {
+  InfoItem(this.title, this.contents);
+  String title;
+  String contents;
 }

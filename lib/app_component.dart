@@ -39,6 +39,7 @@ class AppComponent implements OnInit {
   }
 
   bool showNavBar() {
-    return store.currLoc == store.Loc.prop_list;
+    return store.currLoc == store.Loc.prop_list
+        || store.currLoc == store.Loc.prop_details;
   }
 }

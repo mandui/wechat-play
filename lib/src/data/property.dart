@@ -99,21 +99,27 @@ class _AccountLog {
   String time;
   String purpose;
   num money;
+  String moneyStr;
+  String iconUrl;
 
   _AccountLog.fromJson(Map<String, dynamic> json) {
     time = json[KEY_ACCOUNT_LOG_TIME] ?? "";
     try {
-      if (time.isNotEmpty) {
+      /*if (time.isNotEmpty) {
         List<String> parts = time.split("-");
         time = parts[0] + "年" + parts[1] + "月" + parts[2] + "日";
-      }
+      }*/
     } catch (e) {
       print("do nothing");
     }
-
-
     purpose = json[KEY_ACCOUNT_LOG_PURPOSE] ?? "";
-    money = json[KEY_ACCOUNT_LOG_MONEY] ?? ERROR_VALUE;
+    money = json[KEY_ACCOUNT_LOG_MONEY] ?? 0;
+    num moneyAbs = money.abs();
+    if (money > 0) moneyStr = "+\t${moneyAbs.toStringAsFixed(2)}";
+    else if (money < 0) moneyStr = "-\t${moneyAbs.toStringAsFixed(2)}";
+    else moneyStr = "";
+
+    iconUrl = money >= 0 ? "images/arrow_up_colored.png" : "images/arrow_down_colored.png";
   }
 
 }

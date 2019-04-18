@@ -4,13 +4,89 @@
   margin-top: 2vw;
 }
 
-.money-item {
+.with-padding {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+
+.transition-section {
+  padding-top: 3vw;
+  padding-left: 5vw;
+  padding-right: 3vw;
+}
+
+.transition-item {
   display: flex;
-  height: 25vw;
-  width: 45vw;
+}
+
+.transition-icon {
+  height: 6vw;
+  padding: 2vw;
+}
+
+.transition-amount {
+  font-weight: lighter;
+  font-size: 4vw;
+  text-align: center;
+  margin: auto 0;
+  padding-left: 3vw;
+}
+
+.transition-tail {
+  padding-top: 1vw;
+  padding-right: 2vw;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: right;
+}
+
+.transition-tail-date {
+  font-size: 2vw;
+  font-weight: lighter;
+  color: #78909c;
+}
+
+.transition-tail-usage {
+  font-size: 2vw;
+  font-weight: lighter;
+  color: #607d8b;
+}
+
+.money-item-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1vw;
+  padding: 5vw 8vw 5vw;
+}
+
+.money-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .money-item-icon {
-  height: 20vw;
-  margin: 0 auto;
+  height: 10vw;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.money-item-title {
+  grid-column: 2/4;
+  grid-row: 1;
+  text-align: left;
+  font-weight: 200;
+  font-size: 4vw;
+  color: #2196f3;
+}
+
+.money-item-content {
+  grid-column: 2/4;
+  grid-row: 2;
+  text-align: left;
+  font-weight: 200;
+  font-size: 4vw;
+  color: #90a4ae;
 }
