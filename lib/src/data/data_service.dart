@@ -183,9 +183,6 @@ class DataService {
   }
 
   Future<String> _getAccessToken() async {
-    // https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
-
-
   }
 
   void _sendErrorReport(String error) {}
